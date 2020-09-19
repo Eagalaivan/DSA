@@ -24,6 +24,18 @@ class SinglyLinkedList:
                 count+=1
                 temp=temp.next
             print("count nodes",count)
+    def serachNode(self,elem):
+        if self==None:
+            print("no nodes linkeds head is None")
+        else:
+            pos=1
+            temp=self.head
+            while temp is not None:
+                if temp.value == elem:
+                    print("found at pos",pos)
+                pos+=1
+                temp = temp.next
+            
 object= SinglyLinkedList()
 node1= Node(1)
 object.head=node1
@@ -36,3 +48,4 @@ node3.next=node4
 # print(node3.value,node4.value,node2.value,node1.value)
 object.printNodes()
 object.countNodes()
+object.serachNode(3)
